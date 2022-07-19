@@ -64,17 +64,45 @@ The Google Sheets Spreadshet its located at: https://docs.google.com/spreadsheet
 ### Final Planing
 
 * [1. Description and Business Problem ](#1-description-and-business-problem)
-* [2. Database and Business Assumptions](#2-database-and-business-assumptions])
+* [2. Database and Business Assumptions](#2-database-and-business-assumptions)
 * [3. Solution Strategy ](#3-solution-strategy)
 * [4. Exploration Data Analysis](#4-exploration-data-analysis)
 * [5. Machine Learning Model Selection](#5-machine-learning-model-selection)
 * [6. Model Performance ](#6-model-performance)
 * [7. Business Results](#7-business-results)
 * [8. Model in Production ](#8-model-in-production)
-* [9. Conclusion](#9-conclussion)
+* [9. Conclusion](#9-conclusion)
 * [10. Learning and Future Work](#10-learning-and-future-work)
 
 
+# 1. Description and Business Problem
+
+
+# 2. Database and Business Assumptions
+
+
+# 3. Solution Strategy 
+
+
+# 4. Exploration Data Analysis
+
+
+# 5. Machine Learning Model Selection
+
+
+# 6. Model Performance
+
+
+# 7. Business Results
+
+
+# 8. Model in Production
+
+
+# 9. Conclusion
+
+
+# 10. Learning and Future Work
 
 
 
