@@ -147,8 +147,8 @@ A script was developed in Google Sheets in which the input data are the attribut
 
 ### **H11**. Clientes that are located in a specific region tend to have more interest in insurance.
 ***TRUE*** - Clients that are located in region codes (28,38) have more interest in insurance.
-![H11!](image/H11.png)
-![h11!](image/h11.png)
+![H11-1!](image/H11-1.png)
+![H11-2!](image/h11-2.png)
 
 # 5. Machine Learning Model Selection
 
@@ -179,20 +179,20 @@ So we select LGBM, XGBoost and Random Forest Classifiers to proceed to the Hyper
 |--: |--:| --:|
 |XGB Classifier Tuned |	0.857739|	0.878526|
 
-![xgb!](image/xgb_gain.png)
+![xgb!](image/xgb_tuned.png)
 
 |Model Name	|ROC AUC	|Top @K Acc|
 |:--: |:--:| :--:|
 |**LGBM Classifier Tuned**	|**0.858096**|**0.878539**|
 
-![lgbm!](image/lgbm_gain.png)
+![lgbm!](image/lgbm_tuned.png)
 
 
 |Model Name	|ROC AUC	|Top @K Acc|
 |:--: |:--:| :--:|
 |Random Forest Classifier Tuned|	0.85644	|0.878565|
 
-![rf!](image/rf_gain.png)
+![rf!](image/rf_tuned.png)
 
 As all the models performs similar, we will choose the model which the size of the model object is the smallest, which in this case is the LGBM Classifier.
 
