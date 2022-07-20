@@ -164,12 +164,42 @@ For measuring the performance of the models we will use the cross-validation met
 
 |Model Name				|Accuracy Balanced  |Precision @K Mean	|Recall @K Mean |	ROC AUC Score	|Top K Score|
 |	:---:					|			:--:		|			:--:		|			:--:	|		:--:			|		:--:	|
-|LGBMClassifier			|	0.500212		|	0.310044		|	0.827842	|	0.854041		|0.876922	|
-|XGBClassifier			|	0.506054		|	0.308755		|	0.824398	|	0.852193		|0.876417	|
-|RandomForestClassifier	|	0.543595		|	0.292315		|	0.780504	|	0.831379		|0.864274	|
-|GaussianNB				|	0.783845		|	0.290275		|	|0.775058	|	0.825276		|0.637836	|
+|**LGBMClassifier**		|	0.500212	|0.310044|	**0.827842**	|**0.854041**	|**0.876922**|
+|**XGBClassifier**			|	0.506054		|	0.308755		|	**0.824398**	|	**0.852193**		|**0.876417**	|
+|**RandomForestClassifier**	|	0.543595		|	0.292315		|	**0.780504**	|	**0.831379**		|**0.864274**	|
+|GaussianNB				|	0.783845		|	0.290275		|	0.775058	|	0.825276		|0.637836	|
 |LogisticRegression		|	0.500000		|	0.275936		|	0.736771	|	0.817035		|0.877154	|
-|KNeighborsClassifier	|	0.523210		|	0.285636	    |	0.762669	|	0.803941		|0.8707		|
+|KNeighborsClassifier	|	0.523210		|	0.285636	    |	0.762669	|	0.803941		|0.870726|
+
+So we select LGBM, XGBoost and Random Forest Classifiers to proceed to the Hyper-Parameter-Fine-Tuning, after the optimization of the parameters for each model we compared their model perfomance by plotting their Gain Curve.
+
+|Model Name	|ROC AUC	|Top @K Acc|
+|:--: |:--:| :--:|
+|XGB Classifier Tuned |	0.857739|	0.878526|
+
+-- GAIN CURVE XGB ---
+
+|Model Name	|ROC AUC	|Top @K Acc|
+|:--: |:--:| :--:|
+|**LGBM Classifier Tuned**	|**0.858096**|**0.878539**|
+
+-- GAIN CURVE LGBM ---
+
+
+|Model Name	|ROC AUC	|Top @K Acc|
+|:--: |:--:| :--:|
+|Random Forest Classifier Tuned|	0.85644	|0.878565|
+
+-- GAIN CURVE RANDOM FOREST --
+
+As all the models performs similar, we will choose the model which the size of the model object is the smallest, which in this case is the LGBM Classifier.
+
+|Model | Object Size |
+|:--:|:---:|
+|Random Forest|29248.79 KB|
+|XGBoost | 1085.06 KB|
+|***LGB*** |***314.09 KB***|
+
 
 # 7. Business Results
 
