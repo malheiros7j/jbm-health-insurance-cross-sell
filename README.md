@@ -13,7 +13,7 @@ This project is part of the "DS Community", which is a study environment that pr
 * [1. Description and Business Problem ](#1-description-and-business-problem)
 * [2. Database and Business Assumptions](#2-database-and-business-assumptions)
 * [3. Solution Strategy ](#3-solution-strategy)
-* [4. Top 5 Data Insights ](#4-top-5-data-insights)
+* [4. Top 4 Data Insights ](#4-top-4-data-insights)
 * [5. Machine Learning Model Selection](#5-machine-learning-model-selection)
 * [6. Model Performance ](#6-model-performance)
 * [7. Business Results](#7-business-results)
@@ -128,16 +128,48 @@ Publication of the model in a production environment in the cloud (Heroku) so th
 ### Step 11. Google SpreadSheets
 A script was developed in Google Sheets in which the input data are the attributes and information of the customers and the outcome of that script is a table with the customers attributes and his propension to purchase the new auto insurance.
 
+# 4. Top 4 Data Insights 
 
-# 4. Top 5 Data Insights 
+### **H3.** Most customers under the age of 35 are not interested in insurance.
+***TRUE*** - Customers under the age of 35 are the ones with the least interest in insurance. Approximately only 24%.
 
+-- PUT IMAGE HERE --
+
+### **H6.** Customers with a history of crashed cars tend to be interested in insurance.
+***TRUE*** - 98% of the customers that has interest in purchasing the auto insurance had already crashed their car
+
+-- PUT IMAGE HERE --
+
+### **H7.** Customers with new vehicles tend to be more interested in insurance.
+***FALSE*** - The customers with vehicles between 1 and 2 years are the ones with the most interest in insurance.
+-- PUT IMAGE HERE --
+
+### **H11**. Clientes that are located in a specific region tend to have more interest in insurance.
+***TRUE*** - Clients that are located in region codes (28,38) have more interest in insurance.
 
 
 # 5. Machine Learning Model Selection
 
+The following Machine Learning Models were implemented, all of them aplied to a classification problem:
+* KNN Classifier.
+* Logistic Regression.
+* Gaussian Naive Bayes.
+* Random Forest Classifier.
+* Light Gradient Boosting Machine Classifier.
+* XGBoost Classifier.
+
 
 # 6. Model Performance
+For measuring the performance of the models we will use the cross-validation method in which prevents the model to overfit when the model receives some data that he has never seen before. The @K for the metrics of Ranking-To-Learn approach is 20.000 and will beter explained in the bussines results in the next section
 
+|Model Name				|Accuracy Balanced  |Precision @K Mean	|Recall @K Mean |	ROC AUC Score	|Top K Score|
+|	:---:					|			:--:		|			:--:		|			:--:	|		:--:			|		:--:	|
+|LGBMClassifier			|	0.500212		|	0.310044		|	0.827842	|	0.854041		|0.876922	|
+|XGBClassifier			|	0.506054		|	0.308755		|	0.824398	|	0.852193		|0.876417	|
+|RandomForestClassifier	|	0.543595		|	0.292315		|	0.780504	|	0.831379		|0.864274	|
+|GaussianNB				|	0.783845		|	0.290275		|	|0.775058	|	0.825276		|0.637836	|
+|LogisticRegression		|	0.500000		|	0.275936		|	0.736771	|	0.817035		|0.877154	|
+|KNeighborsClassifier	|	0.523210		|	0.285636	    |	0.762669	|	0.803941		|0.8707		|
 
 # 7. Business Results
 
