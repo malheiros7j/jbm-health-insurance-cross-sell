@@ -176,23 +176,23 @@ For measuring the performance of the models we will use the cross-validation met
 So we select LGBM, XGBoost and Random Forest Classifiers to proceed to the Hyper-Parameter-Fine-Tuning, after the optimization of the parameters for each model we compared their model perfomance by plotting their Gain Curve.
 
 |Model Name	|ROC AUC	|Top @K Acc|
-|:--: |:--:| :--:|
+|--: |--:| --:|
 |XGB Classifier Tuned |	0.857739|	0.878526|
 
--- GAIN CURVE XGB ---
+![xgb!](image/xgb_gain.png)
 
 |Model Name	|ROC AUC	|Top @K Acc|
 |:--: |:--:| :--:|
 |**LGBM Classifier Tuned**	|**0.858096**|**0.878539**|
 
--- GAIN CURVE LGBM ---
+![lgbm!](image/lgbm_gain.png)
 
 
 |Model Name	|ROC AUC	|Top @K Acc|
 |:--: |:--:| :--:|
 |Random Forest Classifier Tuned|	0.85644	|0.878565|
 
--- GAIN CURVE RANDOM FOREST --
+![rf!](image/rf_gain.png)
 
 As all the models performs similar, we will choose the model which the size of the model object is the smallest, which in this case is the LGBM Classifier.
 
