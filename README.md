@@ -133,20 +133,22 @@ A script was developed in Google Sheets in which the input data are the attribut
 ### **H3.** Most customers under the age of 35 are not interested in insurance.
 ***TRUE*** - Customers under the age of 35 are the ones with the least interest in insurance. Approximately only 24%.
 
--- PUT IMAGE HERE --
+![H3!](image/H3.png)
+![H3.1!](image/H3-1.png)
 
 ### **H6.** Customers with a history of crashed cars tend to be interested in insurance.
 ***TRUE*** - 98% of the customers that has interest in purchasing the auto insurance had already crashed their car
 
--- PUT IMAGE HERE --
+![H6!](image/H6.png)
 
 ### **H7.** Customers with new vehicles tend to be more interested in insurance.
 ***FALSE*** - The customers with vehicles between 1 and 2 years are the ones with the most interest in insurance.
--- PUT IMAGE HERE --
+![H7!](image/H7.png)
 
 ### **H11**. Clientes that are located in a specific region tend to have more interest in insurance.
 ***TRUE*** - Clients that are located in region codes (28,38) have more interest in insurance.
-
+![H11!](image/H11.png)
+![h11!](image/h11.png)
 
 # 5. Machine Learning Model Selection
 
