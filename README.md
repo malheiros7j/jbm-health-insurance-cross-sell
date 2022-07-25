@@ -62,7 +62,7 @@ As a result of your consultancy, you will need to deliver a report containing so
 ## 1.4 Solution Planning 
 
 
-#### What is the solution and how it will be delivered?
+#### What is the solution and how will it be delivered?
 The development of a machine learning model that ranks the customers based in his probability (propensity score) to purchase the new auto insurance. 
 
 The Final Model will be available in an API, and may be used by the Company in any time needed.
@@ -103,6 +103,7 @@ In this step, some aspects of the dataset were verified, such as: column names, 
 In featuring engineering, new attributes (columns) were derived based on the original variables, enabling a better description of the phenomenon of that variable.
 
 ### Step 03. Filtering Variables
+Checking the necessity to filter the dataset based on a variable that does not matter to the project itself.
 
 ### Step 04. Exploratory Data Analysis (EDA)
 Exploration of Data in order to find Insights for a better understanding of the Business. Univariate, bivariate and multivariate analyzes were also performed, obtaining some statistical properties that describe them, and more importantly, the correlation between the variables.
@@ -111,7 +112,7 @@ Exploration of Data in order to find Insights for a better understanding of the 
 Session that deals with the preparation of data so that Machine Learning algorithms can be applied. Some types of scaling and encoding were performed so that the categorical variables became numerical.
 
 ### Step 06. Selection of Algorithm Variables
-The selection of attributes was performed using the Feature Importance method of based tree algoritms. In which the most significant attributes were selected so that the model's performance was maximized.
+The selection of attributes was performed using the Feature Importance method of based tree algorithms. In which the most significant attributes were selected so that the model's performance was maximized.
 
 ### Step 07. Machine Learning Model
 Training of Machine Learning models. The model that presented the best performance against the database with applied cross-validation proceeded to the hyper parameterization of the variables of that model, aiming to optimize the generalization of the model.
@@ -152,7 +153,7 @@ A script was developed in Google Sheets in which the input data are the attribut
 
 # 5. Machine Learning Model Selection
 
-The following Machine Learning Models were implemented, all of them aplied to a classification problem:
+The following Machine Learning Models were implemented, all of them applied to a classification problem:
 * KNN Classifier.
 * Logistic Regression.
 * Gaussian Naive Bayes.
@@ -162,7 +163,7 @@ The following Machine Learning Models were implemented, all of them aplied to a 
 
 
 # 6. Model Performance
-For measuring the performance of the models we will use the cross-validation method in which prevents the model to overfit when the model receives some data that he has never seen before. The @K for the metrics of Ranking-To-Learn approach is 20.000 and will beter explained in the bussines results in the next section
+For measuring the performance of the models we will use the cross-validation method which prevents the model from overfitting when the model receives some data that he has never seen before. The @K for the metrics of Ranking-To-Learn approach is 20.000 and will better explained in the business results in the next section.
 
 |Model Name				|Accuracy Balanced  |Precision @K Mean	|Recall @K Mean |	ROC AUC Score	|Top K Score|
 |	:---:					|			:--:		|			:--:		|			:--:	|		:--:			|		:--:	|
@@ -173,7 +174,7 @@ For measuring the performance of the models we will use the cross-validation met
 |LogisticRegression		|	0.500000		|	0.275936		|	0.736771	|	0.817035		|0.877154	|
 |KNeighborsClassifier	|	0.523210		|	0.285636	    |	0.762669	|	0.803941		|0.870726|
 
-So we select LGBM, XGBoost and Random Forest Classifiers to proceed to the Hyper-Parameter-Fine-Tuning, after the optimization of the parameters for each model we compared their model perfomance by plotting their Gain Curve.
+So we selected LGBM, XGBoost and Random Forest Classifiers to proceed to the Hyper-Parameter-Fine-Tuning, after the optimization of the parameters for each model we compared their model performance by plotting their Gain Curve.
 
 |Model Name	|ROC AUC	|Top @K Acc|
 |--: |--:| --:|
@@ -194,7 +195,7 @@ So we select LGBM, XGBoost and Random Forest Classifiers to proceed to the Hyper
 
 ![rf!](image/rf_tuned.png)
 
-As all the models performs similar, we will choose the model which the size of the model object is the smallest, which in this case is the LGBM Classifier.
+As all the models perform similarly, we will choose the model whose size of the model object is the smallest, which in this case is the LGBM Classifier.
 
 |Model | Object Size |
 |:--:|:---:|
@@ -206,7 +207,7 @@ As all the models performs similar, we will choose the model which the size of t
 # 7. Business Results
 Now, with the final model implemented, the business questions of the initial problem of the Insurance All company will be answered.
 ## 7.1 Business Questions 
-### Q1. What percentage of customers interest in purchasing auto insurance will the sales team be able to reach by making 20.000 calls?
+### Q1. What percentage of customers' interest in purchasing auto insurance will the sales team be able to reach by making 20.000 calls?
 
 ![gain20k!](image/gain-20k.png)
 
@@ -232,10 +233,10 @@ Making 40.000 calls, the model proposed is about 1.9 times better than a random 
 
 To make contact to the 80% customers interested in purchasing an auto insurance the sales team needs make 23.300 calls, which correspond to 30.56% of the validation dataset
 
-## 7.2 Revenue Bussines Perfomance
+## 7.2 Revenue Business Performance
 - So, if we take all the customers from the validation dataset there are in total 76.222 clients. Now we are going to calculate the revenue that would be generated from this dataset according to the requested business questions with the fixed price of an insurance as U$2000,00 per year and not putting in the matter the cost of each call to reach a client.
 
-For comparinson purpose we are taking a "random" model representation, which could be a simple ordenation of the list by age or some other specific attribute of the features.
+For comparison purposes we are taking a "random" model representation, which could be a simple ordination of the list by age or some other specific attribute of the features.
 
 **PS: All the assumptions of values are just fictional and do not translate a real word behavior.**
 
@@ -268,7 +269,7 @@ To reach the 80% would be necessary 23.350 calls.
 # 8. Model in Production
 The model was deployed on Heroku ( https://health-insurance-jbm.herokuapp.com) and its available in Google Sheets (https://docs.google.com/spreadsheets/d/164sfg8vRjYGQ_k-3QX85D-L4Pf6gdf-alpOwOTJpJcY/edit#gid=0). 
 
-The Google Sheet can be acess by any user with a google account and can be used to establish a ranking of customers most likely to purchase vehicle insurance, with direct production data.
+The Google Sheet can be accessed by any user with a google account and can be used to establish a ranking of customers most likely to purchase vehicle insurance, with direct production data.
 
 In the header of the Google Sheet there is a button called Health-Insurance-Propense-Score, once activated, returns the scores based on the propensity to that customer purchases a new insurance car.
 
@@ -279,19 +280,22 @@ In this project, all the necessary steps were taken to implement a complete Data
 
 Some Business Insights were generated during Exploratory Data Analysis that helped the CEO, the business team and the data scientist to better understand the business. In view of these results, the project achieved its objective of finding an assertive solution for ranking the customers in order to optimize the sales team's effectiveness to contact its customers.
 
+With the model in production, it is expected to be at least 2.5x more effective in getting customers to purchase the new product of auto insurance of the Insurance All Company. To reach about 93% of the people interested in acquiring the auto insurance is needed to reach out to only 40% of the customers in the database.
 
 
 
 # 10. Learning and Future Work
 **Learning**
 * This project was a Classification project with a Learning To Rank approach, since we have to order the customers based on their propensity score to purchase the new product.
-* It is extremely important to analyze the problem core so we can use the most appropriate metric to measure the performance of the model. In this case, we are not looking at the most "common" metrics when it comes to classification problem.
-* Select the most simpler model with a adequate performance is more important than making a model that is more accurate but its to complex and heavy. 
+* It is extremely important to analyze the problem core so we can use the most appropriate metric to measure the performance of the model. In this case, we are not looking at the most "common" metrics when it comes to classification problems.
+* Selecting the most simple model with adequate performance is more important than making a model that is more accurate but it's too complex and heavy. 
 
 **Future Works**
-* Make new features that could explain more efficiently the phenonmenons of the problem.
-* Use another type of encoders in the preparation of the data.
+* Make new features that could explain more efficiently the phenomenons of the problem.
+* Use another type of encoder in the preparation of the data.
 * Try balancing data and how it impacts the performance of the model.
+
+
 
 
 
