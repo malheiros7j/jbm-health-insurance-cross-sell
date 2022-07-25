@@ -204,6 +204,65 @@ As all the models performs similar, we will choose the model which the size of t
 
 
 # 7. Business Results
+Now, with the final model implemented, the business questions of the initial problem of the Insurance All company will be answered.
+## 7.1 Business Questions 
+### Q1. What percentage of customers interest in purchasing auto insurance will the sales team be able to reach by making 20.000 calls?
+
+![gain20k!](image/gain-20k.png)
+
+By making 20.000 calls, which correspond to 26.24% of our validation dataset, the sales team would be able to reach 72,08% of people interested in purchasing a new car insurance.
+
+![lift20k!](image/lift-20k.png)
+
+Making 20.000 calls, the model proposed is about 2.75 times better than a random choice
+
+### Q2. If the sales team’s capacity increases to 40.00 calls, what would be the percentage of people interested in purchasing a new auto insurance the sales team would be able to reach out.
+
+![gain40k!](image/gain-40k.png)
+
+By making 40.000 calls, which correspond to 52.48% of our validation dataset, the sales team would be able to reach 99,44% of people interested in purchasing a new car insurance.
+
+![lift40k!](image/lift-40k.png)
+
+Making 40.000 calls, the model proposed is about 1.9 times better than a random choice
+
+### Q3. How many calls does the sales team need to make contact to 80% of the customers interested in purchasing auto insurance?
+
+![gain80k!](image/gain-80k.png)
+
+To make contact to the 80% customers interested in purchasing an auto insurance the sales team needs make 23.300 calls, which correspond to 30.56% of the validation dataset
+
+## 7.2 Revenue Bussines Perfomance
+- So, if we take all the customers from the validation dataset there are in total 76.222 clients. Now we are going to calculate the revenue that would be generated from this dataset according to the requested business questions with the fixed price of an insurance as U$2000,00 per year and not putting in the matter the cost of each call to reach a client.
+
+For comparinson purpose we are taking a "random" model representation, which could be a simple ordenation of the list by age or some other specific attribute of the features.
+
+**PS: All the assumptions of values are just fictional and do not translate a real word behavior.**
+
+### 7.2.1 Revenue for 20.000 calls
+
+|Model | People Reached | Total People Interested | Revenue |
+|:---: | :-------------:|:-----:|:----|
+| Random Model    |2428| 9256 | U$4.856.000,00|
+| Suggested Model |6671| 9526 | U$13.342.000,00|
+| Difference Between Models | 4243| ---- | U$9.138.000,00|
+
+### 7.2.2 Revenue for 40.000 calls
+
+|Model | People Reached | Total People Interested | Revenue |
+|:---: | :-------------:|:-----:|:----|
+| Random Model    |4857| 9256 | U$9.714.000,00|
+| Suggested Model |9204| 9526 | U$18.408.000,00|
+| Difference Between Models | 4347| ---- | U$8.694.000,00|
+
+### 7.2.3 Revenue for 80% of interest people of the dataset 
+To reach the 80% would be necessary 23.350 calls.
+
+|Model | People Reached | Total People Interested | Revenue |
+|:---: | :-------------:|:-----:|:----|
+| Random Model    |2835| 9256 | U$5.670.000,00|
+| Suggested Model |7404| 9526 | U$14.808.000,00|
+| Difference Between Models | 4569| ---- | U$9.138.000,00|
 
 
 # 8. Model in Production
