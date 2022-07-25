@@ -1,3 +1,10 @@
+<div style="text-align:center"> 
+
+![insurance!](image/insurance-company.png)
+
+</div>
+
+
 # Insurance All Company - Health Insurance Cross Sell
 
 The following context is completely fictitious, the company, the context and the CEO. The business questions are also fictional but were made in an attempt to exemplify how they would be required in a business work environment.
