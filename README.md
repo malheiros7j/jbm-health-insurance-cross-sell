@@ -148,7 +148,7 @@ A script was developed in Google Sheets in which the input data are the attribut
 ### **H11**. Clientes that are located in a specific region tend to have more interest in insurance.
 ***TRUE*** - Clients that are located in region codes (28,38) have more interest in insurance.
 ![H11-1!](image/H11-1.png)
-![H11-2!](image/h11-2.png)
+![H11-2!](image/H11-2.png)
 
 # 5. Machine Learning Model Selection
 
@@ -266,11 +266,33 @@ To reach the 80% would be necessary 23.350 calls.
 
 
 # 8. Model in Production
+The model was deployed on Heroku ( https://health-insurance-jbm.herokuapp.com) and its available in Google Sheets (https://docs.google.com/spreadsheets/d/164sfg8vRjYGQ_k-3QX85D-L4Pf6gdf-alpOwOTJpJcY/edit#gid=0). 
+
+The Google Sheet can be acess by any user with a google account and can be used to establish a ranking of customers most likely to purchase vehicle insurance, with direct production data.
+
+In the header of the Google Sheet there is a button called Health-Insurance-Propense-Score, once activated, returns the scores based on the propensity to that customer purchases a new insurance car.
+
 
 
 # 9. Conclusion
+In this project, all the necessary steps were taken to implement a complete Data Science project in a production environment. The project management method called CRISP-DM/DS was used and a satisfactory performance was obtained using the LGBM Classifier model to rank the most likely customers to obtain the new product of the Insurance All Company: auto insurance.
+
+Some Business Insights were generated during Exploratory Data Analysis that helped the CEO, the business team and the data scientist to better understand the business. In view of these results, the project achieved its objective of finding an assertive solution for ranking the customers in order to optimize the sales team's effectiveness to contact its customers.
+
+
 
 
 # 10. Learning and Future Work
+**Learning**
+* This project was a Classification project with a Learning To Rank approach, since we have to order the customers based on their propensity score to purchase the new product.
+* It is extremely important to analyze the problem core so we can use the most appropriate metric to measure the performance of the model. In this case, we are not looking at the most "common" metrics when it comes to classification problem.
+* Select the most simpler model with a adequate performance is more important than making a model that is more accurate but its to complex and heavy. 
+
+**Future Works**
+* Make new features that could explain more efficiently the phenonmenons of the problem.
+* Use another type of encoders in the preparation of the data.
+* Try balancing data and how it impacts the performance of the model.
+
+
 
 
