@@ -274,7 +274,7 @@ To reach the 80% would be necessary 23.350 calls.
 
 
 # 8. Model in Production
-The model was deployed on Heroku ( https://health-insurance-jbm.herokuapp.com) and its available in Google Sheets (https://docs.google.com/spreadsheets/d/164sfg8vRjYGQ_k-3QX85D-L4Pf6gdf-alpOwOTJpJcY/edit#gid=0). 
+The model was deployed on Render (https://jbm-health-insurance-model.onrender.com) and its available in Google Sheets (https://docs.google.com/spreadsheets/d/164sfg8vRjYGQ_k-3QX85D-L4Pf6gdf-alpOwOTJpJcY/edit#gid=0). 
 
 The Google Sheet can be accessed by any user with a google account and can be used to establish a ranking of customers most likely to purchase vehicle insurance, with direct production data.
 
